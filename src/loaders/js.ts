@@ -30,7 +30,7 @@ export const jsLoader: Loader = async (input, { options }) => {
 
   // typescript => js
   if (input.extension === '.ts') {
-    contents = await transform(contents, { loader: 'ts' }).then(r => r.code)
+    contents = await transform(contents, { loader: 'ts', target: options.target }).then(r => r.code)
   }
 
   // esm => cjs

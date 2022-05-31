@@ -27,7 +27,8 @@ export type LoadFile = (input: InputFile) => LoaderResult | Promise<LoaderResult
 export interface LoaderOptions {
   ext?: 'mjs' | 'js' | 'ts',
   format?: 'cjs' | 'esm',
-  declaration?: boolean
+  declaration?: boolean,
+  target?: string
 }
 
 export interface LoaderContext {

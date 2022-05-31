@@ -41,7 +41,8 @@ export async function mkdist (options: MkdistOptions /* istanbul ignore next */ 
   const { loadFile } = createLoader({
     format: options.format,
     ext: options.ext,
-    declaration: options.declaration
+    declaration: options.declaration,
+    target: options.target
   })
 
   // Use loaders to get output files
